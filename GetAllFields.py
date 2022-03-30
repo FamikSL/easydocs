@@ -1,5 +1,4 @@
 from mailmerge import MailMerge
-import sys
 def readAllFields(path = ''):
     if path == '':
         #sys.exit('You didn\'t select docx file. Please select docx file!')
@@ -13,6 +12,6 @@ def readAllFields(path = ''):
     else:
         documentFields = document.get_merge_fields()
         if len(documentFields) == 0:
-            sys.exit("Your docx file doesn\'t have any merge-fields!")
+            raise ValueError("Your docx file doesn\'t have any merge-fields!")
         else:
             return documentFields
