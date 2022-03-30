@@ -1,8 +1,8 @@
 # easydocs
  Automating the creation of documentation in Word
 ## Plans
-1. Get all merge-fields from Word doc
-2. Write tests
+1. Get all merge-fields from Word doc :heavy_check_mark:
+2. Write tests :heavy_check_mark:
 3. Create exel sheets from word file by template
 4. Write tests and exeptions
 5. Generate Word doc by template and by data from sheets
