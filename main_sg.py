@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from GetAllFields import readAllFields
+from word_reader import readAllFields
 def main_window():
     sg.theme('DarkAmber')
 
@@ -17,6 +17,3 @@ def main_window():
     #else:
         #return WORD_path, Excel_path, Save_path
     return WORD_path, Excel_path, Save_path
-WORD_path, Excel_path, Save_path = main_window()
-print(readAllFields(WORD_path))
-
