@@ -2,14 +2,14 @@
  Automating the creation of documentation in Word
 ## Plans
 1. Get all merge-fields from Word doc :heavy_check_mark:
-2. Write tests :heavy_check_mark:
-3. Create exel sheets from word file by template
-4. Write tests and exeptions
-5. Generate Word doc by template and by data from sheets
-6. More tests and more debug
-7. Make a UI
-8. Make user freandly UI
-9. Fix bugs
-10. Create "How to install" guide
-11. Create "How to use" guide
-12. Get some feedback
+1. Write tests :heavy_check_mark:
+1. Create exel sheets from word file by template
+1. Write tests and exeptions
+1. Generate Word doc by template and by data from sheets
+1. More tests and more debug
+1. Make a UI :heavy_check_mark:
+1. Make user freandly UI
+1. Fix bugs
+1. Create "How to install" guide
+1. Create "How to use" guide
+1. Get some feedback
