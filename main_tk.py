@@ -69,7 +69,6 @@ open_dir_to_save_button = Button(main_window, text="Выбрать папку", 
 open_dir_to_save_button.grid(column=0, row=5, sticky=W, padx=(80), pady=(10))    
 
 # Cекция потдверждения
-
 submit_button = Button(main_window, text="Подтвердить", command = lambda : submit())
 submit_button.grid(column=1, row=6, sticky=W, padx=(10), pady=(10))   
 
