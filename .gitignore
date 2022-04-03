@@ -1,2 +1,5 @@
 _try.py
 venv/
+__pycache__
+__pycache__/
+*.pyc
