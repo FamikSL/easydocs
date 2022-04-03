@@ -1,4 +1,4 @@
-from main_sg import main_window
+from mergre_docs_window import main_window
 from dataclasses import Field
 from pydoc import doc
 from word_reader import readAllFields
