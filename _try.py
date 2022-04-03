@@ -16,10 +16,8 @@ import pandas as pd
 WORD_path, Excel_path, Save_path = main_window()
 
 
-
 df1 = pd.read_excel(Excel_path, index_col=0)
 
-print(df1)
 
 for i in df1.index:
     document = MailMerge(WORD_path)
