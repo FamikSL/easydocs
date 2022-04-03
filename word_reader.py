@@ -1,17 +1,21 @@
 from mailmerge import MailMerge
+import sys
+import PySimpleGUI as sg
 def readAllFields(path = ''):
+    error = ''
     if path == '':
-        #sys.exit('You didn\'t select docx file. Please select docx file!')
-        raise FileNotFoundError('You didn\'t select docx file. Please select docx file!')
         
+        error = 'You didn\'t select docx file. Please select docx file!'
+        return (),error
     try:
         document = MailMerge(path)
     except FileNotFoundError:
-        #sys.exit("Couldn't find docx file. Check file path!")
-        raise FileNotFoundError("Couldn't find docx file. Check file path!")
+        error = "Couldn't find docx file. Check file path!"
+        return (),error
     else:
         documentFields = document.get_merge_fields()
         if len(documentFields) == 0:
-            raise ValueError("Your docx file doesn\'t have any merge-fields!")
+            error="Your docx file doesn\'t have any merge-fields!"
+            return (), error
         else:
-            return documentFields
+            return documentFields, error
