@@ -21,7 +21,6 @@ def main():
             main_window.close()
             excel_from_word_window.window_word_to_excel()
         
-            
-
+          
     main_window.close()
 main()

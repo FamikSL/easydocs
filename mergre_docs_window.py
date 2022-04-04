@@ -1,15 +1,15 @@
 import PySimpleGUI as sg
-from Excel_Reader import read_excell
-from Word_Reader import readAllFields
+from excel_reader import read_excell
+from word_reader import readAllFields
 from Merge_Docs import merge_docs
 
 def merge_window():
       sg.theme('Dark Blue 3')
 
       layout = [
-            [sg.Text('Укажите расположение до Word-шаблона:', size=(35, 1), font='Roboto'), sg.InputText(size=(80, 1), font='Roboto'), sg.FileBrowse(font='Roboto',file_types=(("ALL", "docx doc"),))],
-            [sg.Text('Укажите расположение файла Excel:', size=(35, 1), font='Roboto'), sg.InputText(size=(80, 1),font='Roboto'), sg.FileBrowse(font='Roboto')],
-            [sg.Text('Укажите путь для сохранения Паспортов:', size=(35, 1), font='Roboto'), sg.InputText(size=(80, 1), font='Roboto'), sg.FolderBrowse(font='Roboto')],
+            [sg.Text('Укажите расположение до Word-шаблона:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FileBrowse(font='Roboto',file_types=(("Docs", "docx doc"), ("All", "*")))],
+            [sg.Text('Укажите расположение файла Excel:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1),font='Roboto 10'), sg.FileBrowse(font='Roboto',file_types=(("Sheets", "xlsx"), ("All", "*")))],
+            [sg.Text('Укажите путь для сохранения Паспортов:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FolderBrowse(font='Roboto')],
             [sg.Button('Старт', font='Roboto'), sg.Button('Выйти', font='Roboto')]]
 
       window = sg.Window('easydocs', layout, icon='brand/icon.ico')

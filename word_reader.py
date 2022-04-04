@@ -1,5 +1,4 @@
 from mailmerge import MailMerge
-import sys
 import PySimpleGUI as sg
 def readAllFields(path = ''):
     error = ''
