@@ -10,7 +10,7 @@ def merge_window():
             [sg.Text('Укажите расположение до Word-шаблона:', size=(35, 1), font='Roboto'), sg.InputText(size=(80, 1), font='Roboto'), sg.FileBrowse(font='Roboto',file_types=(("ALL", "docx doc"),))],
             [sg.Text('Укажите расположение файла Excel:', size=(35, 1), font='Roboto'), sg.InputText(size=(80, 1),font='Roboto'), sg.FileBrowse(font='Roboto')],
             [sg.Text('Укажите путь для сохранения Паспортов:', size=(35, 1), font='Roboto'), sg.InputText(size=(80, 1), font='Roboto'), sg.FolderBrowse(font='Roboto')],
-            [sg.Button('Start', font='Roboto'), sg.Button('Exit', font='Roboto')]]
+            [sg.Button('Старт', font='Roboto'), sg.Button('Выйти', font='Roboto')]]
 
       window = sg.Window('easydocs', layout, icon='brand/icon.ico')
 
@@ -18,9 +18,10 @@ def merge_window():
             event, values = window.read()
             WORD_path, Excel_path, Save_path = values[0], values[1], values[2]
 
-            if event == sg.WIN_CLOSED or event == 'Exit':
+                  
+            if event == sg.WIN_CLOSED or event == 'Выйти':
                   break
-            if event == 'Start':
+            if event == 'Старт':
                   documentFields, error_1 = readAllFields(WORD_path)
                   if error_1 != '':
                         sg.popup(error_1, title='Предупреждение',font='Roboto')

@@ -1,25 +1,12 @@
-from mergre_docs_window import main_window
-from dataclasses import Field
-from pydoc import doc
 from Word_Reader import readAllFields
-from mailmerge import MailMerge
 import pandas as pd
-
-Word_path, Excel_path, Save_path = main_window()
-Word_path = ''
-Excel_path = 'C:/Users/Vadim/Documents/GitHub/easydocs/sample_docs/input.xlsx'
-df1 = pd.read_excel(Excel_path, index_col=0)
-
-word_fields = readAllFields(Word_path)
-exel_fields = set(df1.columns.to_list())
-print(word_fields)
-if (word_fields.symmetric_difference(exel_fields) == set() ):
-    print(1)
+import os
 
 
-# for i in df1.index:
-#     document = MailMerge(WORD_path)
-#     dt=(df1.loc[[i]].to_dict('records')[0])
-#     document.merge(**dt)
-#     document.write(f'{Save_path}/{i}_output.docx')
-
+Word_path = r"C:/Users/Vadim/Documents/GitHub/easydocs/sample_docs/Template(test1).docx"
+Save_path = r'C:/Users/Vadim/Documents/GitHub/easydocs/sample_docs/out'
+new_name = os.path.basename(Word_path).split('.')[0]
+documentFields = readAllFields(Word_path)[0]
+df = pd.DataFrame([['']* len(list(documentFields))],columns=list(documentFields))
+print(df.head())
+#df.to_excel(f'{Save_path}/{new_name}.xlsx') 
