@@ -1,16 +1,19 @@
 import pandas as pd
 def read_excell(path = ''):
+    error = ''
     if path == '':
-        
-        raise FileNotFoundError('You didn\'t select excel file. Please select docx file!')
-    
+        error = 'You didn\'t select excel file. Please select docx file!'
+        return None, error 
     try:
         dataframe = pd.read_excel(path, index_col=0)
     except FileNotFoundError:
-        raise FileNotFoundError("Couldn't find xlsx file. Check file path!")
+        error = "Couldn't find xlsx file. Check file path!"
+        return None, error 
     else:
         if len(dataframe.columns.to_list()) == 0:
-            raise ValueError("Your xlsx file doesn\'t have any columns!")
+            error = "Your xlsx file doesn\'t have any columns!"
+            return None, error 
         if len(dataframe.index) == 0:
-            raise ValueError("Your xlsx file doesn\'t have any rows!")
-        return
+            error = "Your xlsx file doesn\'t have any rows!"
+            return None, error 
+        return dataframe, error

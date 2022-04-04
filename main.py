@@ -9,11 +9,13 @@ layout = [
 main_window = sg.Window('easydocs', layout, icon='brand/icon.ico')
 
 while True:  
-      event, values = main_window.read()
-      if event == sg.WIN_CLOSED:
-            break
-      if event == 'Создать документы по шаблону':
-          mergre_docs_window.merge_window()
-          main_window.close()
+    event, values = main_window.read()
+    if event == sg.WIN_CLOSED:
+        break
+    if event == 'Создать документы по шаблону':
+        main_window.close()
+        mergre_docs_window.merge_window()
+    
+          
 
 main_window.close()

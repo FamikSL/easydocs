@@ -4,7 +4,6 @@ import PySimpleGUI as sg
 def readAllFields(path = ''):
     error = ''
     if path == '':
-        
         error = 'You didn\'t select docx file. Please select docx file!'
         return (),error
     try:

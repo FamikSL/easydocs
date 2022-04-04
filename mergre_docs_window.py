@@ -1,5 +1,7 @@
 import PySimpleGUI as sg
-from word_reader import readAllFields
+from Excel_Reader import read_excell
+from Word_Reader import readAllFields
+from Merge_Docs import merge_docs
 
 def merge_window():
       sg.theme('Dark Blue 3')
@@ -15,11 +17,19 @@ def merge_window():
       while True:  
             event, values = window.read()
             WORD_path, Excel_path, Save_path = values[0], values[1], values[2]
-            print(event, values)
+
             if event == sg.WIN_CLOSED or event == 'Exit':
                   break
             if event == 'Start':
-                  documentFields, error = readAllFields(WORD_path)
-                  if error != '':
-                        sg.popup(error, title='Предупреждение',font='Roboto')   
+                  documentFields, error_1 = readAllFields(WORD_path)
+                  if error_1 != '':
+                        sg.popup(error_1, title='Предупреждение',font='Roboto')
+                  table_data, error_2 = read_excell(Excel_path)
+                  if error_2 != '':
+                        sg.popup(error_2, title='Предупреждение',font='Roboto')
+                  if error_1 == '' and error_2 == '':
+                        merge_docs(table_data, WORD_path, Save_path)
+                  
+                  
+                     
       window.close()
