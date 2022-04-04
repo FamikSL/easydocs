@@ -5,7 +5,8 @@ def read_excell(path = ''):
         error = 'You didn\'t select excel file. Please select docx file!'
         return None, error 
     try:
-        dataframe = pd.read_excel(path, index_col=0)
+        dataframe = pd.read_excel(path, index_col=0, dtype=str)
+        dataframe.fillna('', inplace=True)
     except FileNotFoundError:
         error = "Couldn't find xlsx file. Check file path!"
         return None, error 
