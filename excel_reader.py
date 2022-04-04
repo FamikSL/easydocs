@@ -2,19 +2,19 @@ import pandas as pd
 def read_excell(path = ''):
     error = ''
     if path == '':
-        error = 'You didn\'t select excel file. Please select docx file!'
+        error = 'Excel файл не выбран!'
         return None, error 
     try:
         dataframe = pd.read_excel(path, index_col=0, dtype=str)
         dataframe.fillna('', inplace=True)
     except FileNotFoundError:
-        error = "Couldn't find xlsx file. Check file path!"
+        error = "Не могу найти xlsx файл! Проверьте путь до файла."
         return None, error 
     else:
         if len(dataframe.columns.to_list()) == 0:
-            error = "Your xlsx file doesn\'t have any columns!"
+            error = "Xlsx файл - пуст!"
             return None, error 
         if len(dataframe.index) == 0:
-            error = "Your xlsx file doesn\'t have any rows!"
+            error = "В Xlsx файле нет данных для заполнения!"
             return None, error 
         return dataframe, error

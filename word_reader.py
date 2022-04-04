@@ -3,17 +3,17 @@ import PySimpleGUI as sg
 def readAllFields(path = ''):
     error = ''
     if path == '':
-        error = 'You didn\'t select docx file. Please select docx file!'
+        error = 'Файл Word не выбран!'
         return (),error
     try:
         document = MailMerge(path)
     except FileNotFoundError:
-        error = "Couldn't find docx file. Check file path!"
+        error = "Не могу найти docx файл! Проверьте путь до файла."
         return (),error
     else:
         documentFields = document.get_merge_fields()
         if len(documentFields) == 0:
-            error="Your docx file doesn\'t have any merge-fields!"
+            error="В docx файле нет полей для замены(merge-fields)!"
             return (), error
         else:
             return documentFields, error
