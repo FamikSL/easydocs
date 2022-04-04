@@ -1,6 +1,6 @@
 import unittest
 
-from word_reader import readAllFields
+from Word_Reader import readAllFields
 
 class TestAssertions(unittest.TestCase):
 

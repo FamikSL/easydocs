@@ -1,7 +1,7 @@
 from mergre_docs_window import main_window
 from dataclasses import Field
 from pydoc import doc
-from word_reader import readAllFields
+from Word_Reader import readAllFields
 from mailmerge import MailMerge
 import pandas as pd
 
