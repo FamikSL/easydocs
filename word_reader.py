@@ -12,6 +12,7 @@ def readAllFields(path = ''):
         return (),error
     else:
         documentFields = document.get_merge_fields()
+
         if len(documentFields) == 0:
             error="В docx файле нет полей для замены(merge-fields)!"
             return (), error
