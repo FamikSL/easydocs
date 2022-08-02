@@ -15,12 +15,10 @@ def main():
         if event == sg.WIN_CLOSED:
             break
         if event == 'Создать документы по шаблону':
-            main_window.close()
             mergre_docs_window.merge_window()
         if event == 'Выгрузить поля документа в таблицу':
-            main_window.close()
             excel_from_word_window.window_word_to_excel()
         
           
-    main_window.close()
+    
 main()
