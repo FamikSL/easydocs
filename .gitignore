@@ -1,8 +1,12 @@
 venv/
 /venv
-**/__pycache__
+
 /__pycache__
 *.pyc
 /build
 /dist
 /Release
+__pycache__
+**/__pycache__/
+/__pycache__
+__pycache__/
