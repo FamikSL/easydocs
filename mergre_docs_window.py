@@ -9,7 +9,7 @@ def merge_window():
       layout = [
             [sg.Text('Укажите расположение до Word-шаблона:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FileBrowse(font='Roboto',file_types=(("Docs", "docx doc"), ("All", "*")))],
             [sg.Text('Укажите расположение файла Excel:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1),font='Roboto 10'), sg.FileBrowse(font='Roboto',file_types=(("Sheets", "xlsx xlsm"), ("All", "*")))],
-            [sg.Text('Укажите путь для сохранения Паспортов:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FolderBrowse(font='Roboto')],
+            [sg.Text('Укажите путь для сохранения файлов:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FolderBrowse(font='Roboto')],
             [sg.Text('Укажите имя для файлов:', size=(35, 1), font='Roboto'), sg.InputText(size=(30, 1), font='Roboto'), sg.Radio('Номер перед названия','index', key ='index_before', default = 'True'), sg.Radio('Номер после названия','index', key='index_after')
  ],
             [sg.Button('Старт', font='Roboto'), sg.Button('Выйти', font='Roboto')]]
