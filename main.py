@@ -7,7 +7,6 @@ def main():
     layout = [      
         [sg.Button('Создать документы по шаблону', font='Roboto')],
         [sg.Button('Выгрузить поля документа в таблицу', font='Roboto')]]
-
     main_window = sg.Window('easydocs', layout, icon='brand/icon.ico')
 
     while True:  
@@ -20,5 +19,4 @@ def main():
             excel_from_word_window.window_word_to_excel()
         
           
-    
 main()

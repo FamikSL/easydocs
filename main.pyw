@@ -6,6 +6,7 @@ def main():
 
     layout = [      
         [sg.Button('Создать документы по шаблону', font='Roboto')],
+        [sg.Button('Выгрузить поля документа в таблицу', font='Roboto')],
         [sg.Button('Выгрузить поля документа в таблицу', font='Roboto')]]
 
     main_window = sg.Window('easydocs', layout, icon='brand/icon.ico')
