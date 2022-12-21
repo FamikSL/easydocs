@@ -8,7 +8,8 @@
 1. Generate Word doc by template and by data from sheets :heavy_check_mark:
 1. More tests and more debug :heavy_check_mark:
 1. Make a UI :heavy_check_mark:
-1. Make user freandly UI
-1. Fix bugs
+1. Make user freandly UI :heavy_check_mark:
+1. Fix bugs :heavy_check_mark:
 1. Create "How to use" guide
-1. Get some feedback
+1. Get some feedback :heavy_check_mark:
+1. Write tests

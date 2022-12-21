@@ -7,7 +7,7 @@ def window_word_to_excel():
 
     layout = [
           [sg.Text('Укажите расположение до Word-шаблона:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FileBrowse(font='Roboto',file_types=(("ALL", "docx doc"),))],
-          [sg.Text('Укажите путь для сохранения Паспортов:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FolderBrowse(font='Roboto')],
+          [sg.Text('Укажите путь для сохранения Excel:', size=(35, 1), font='Roboto'), sg.InputText(size=(90, 1), font='Roboto 10'), sg.FolderBrowse(font='Roboto')],
           [sg.Button('Старт', font='Roboto'), sg.Button('Выйти', font='Roboto')]]
 
     main_window = sg.Window('easydocs', layout, icon='brand/icon.ico')
